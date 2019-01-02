@@ -1,19 +1,18 @@
-$color-main: #55ACEE;
-$font-main: 'Roboto', sans-serif;
-
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: $font-main;
-  background-color: $color-main;
+  font-family: "Roboto", sans-serif;
+  background-color: #55ACEE;
   color: #fff;
   height: 100vh;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .container {
@@ -23,25 +22,21 @@ body {
   text-align: center;
 }
 
-.quote {
-  &__header,
-  &__content,
-  &__author {
-    font-weight: 300;
-  }
+.quote__header, .quote__content, .quote__author {
+  font-weight: 300;
+}
 
-  &__header {
-    margin: 0 auto;
-    font-size: 40px;
-  }
+.quote__header {
+  margin: 0 auto;
+  font-size: 40px;
+}
 
-  &__content {
-    margin: 6vh auto 0;
-  }
+.quote__content {
+  margin: 6vh auto 0;
+}
 
-  &__author {
-    margin: 3vh auto 0;
-  }
+.quote__author {
+  margin: 3vh auto 0;
 }
 
 .trigger {
@@ -51,17 +46,17 @@ body {
   padding: .5vh 0;
   width: 30vw;
   text-align: center;
-  font-family: $font-main;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
   background: none;
   border: solid 2px #6DB8F1;
   border-radius: 2px;
+}
 
-  &:focus {
-    outline: none !important; 
-  }
+.trigger:focus {
+  outline: none !important;
 }
 
 .twitter__button {
@@ -69,20 +64,19 @@ body {
   margin: 1vh auto 0;
   padding: .5vh 0;
   width: 30vw;
-  font-family: $font-main;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 16px;
   border: solid 2px #6DB8F1;
   border-radius: 2px;
-
-
-  .tweet {
-    text-decoration: none;
-    color: #fff;
-
-    .fab {
-      padding: 0 .5vw;
-    }
-  }
 }
 
+.twitter__button .tweet {
+  text-decoration: none;
+  color: #fff;
+}
+
+.twitter__button .tweet .fab {
+  padding: 0 .5vw;
+}
+/*# sourceMappingURL=style.css.map */
