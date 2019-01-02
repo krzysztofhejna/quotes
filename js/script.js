@@ -12,6 +12,9 @@ function getQuote() {
 }
 
 function createTweet(input) {
+  if (!(Array.isArray(input) && input.length > 0)) {
+    return;
+  }
   var data = input[0];
 
   var dataElement = document.createElement('div');
@@ -27,12 +30,13 @@ function createTweet(input) {
 
   if (tweetText.length > 140) {
     getQuote();
-  } else {
-    var tweet = tweetLink + encodeURIComponent(tweetText);
-    document.querySelector('.quote__content').innerText = quoteText;
-    document.querySelector('.quote__author').innerText = "Author: " + quoteAuthor;
-    document.querySelector('.tweet').setAttribute('href', tweet);
+    return;
   }
+
+  var tweet = tweetLink + encodeURIComponent(tweetText);
+  document.querySelector('.quote__content').innerText = quoteText;
+  document.querySelector('.quote__author').innerText = "Author: " + quoteAuthor;
+  document.querySelector('.tweet').setAttribute('href', tweet);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
